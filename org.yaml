@@ -1,1 +1,29 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  description: Time responsável pelos serviços de plataforma
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: frontend-team
+  description: Time responsável pelos frontends React
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: hector
+spec:
+  profile:
+    displayName: Hector Bonett
+    email: hector@example.com
+  memberOf: [platform-team, frontend-team]
 
