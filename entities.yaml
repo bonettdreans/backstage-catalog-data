@@ -1,50 +1,22 @@
-
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: developer-tools
-  description: Serviços voltados ao desenvolvimento
+  name: fastapi-services
+  description: Sistema que agrupa APIs baseadas em FastAPI
 spec:
-  owner: group:platform-team
+  owner: group:devs
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: fastapi-service
-  description: API de backend desenvolvida em FastAPI
+  name: sample-fastapi
+  description: Exemplo de API gerada via template
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: production
-  owner: group:platform-team
-  system: developer-tools
-  providesApis:
-    - fastapi-service-api
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: react-frontend
-  description: Aplicação frontend em React
-  annotations:
-    backstage.io/techdocs-ref: dir:.
-spec:
-  type: website
-  lifecycle: production
-  owner: group:frontend-team
-  system: developer-tools
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: fastapi-service-api
-  description: API exposta pela aplicação FastAPI
-spec:
-  type: openapi
-  lifecycle: production
-  owner: group:platform-team
-  system: developer-tools
-  definition:
-    $text: https://raw.githubusercontent.com/<ORG>/<REPO>/main/openapi.yaml
+  owner: group:devs
+  system: fastapi-services
