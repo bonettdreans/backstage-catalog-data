@@ -2,20 +2,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: platform-team
-  description: Time responsável pelos serviços de plataforma
+  name: devs
+  description: Time de desenvolvedores responsáveis pelas APIs FastAPI
 spec:
   type: team
+  profile:
+    displayName: Dev Team
+    email: devs@mycompany.com
   children: []
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: frontend-team
-  description: Time responsável pelos frontends React
-spec:
-  type: team
-  children: []
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -24,6 +19,5 @@ metadata:
 spec:
   profile:
     displayName: Hector Bonett
-    email: hector@example.com
-  memberOf: [platform-team, frontend-team]
-
+    email: hgilbonett@mycompany.com
+  memberOf: [devs]
