@@ -16,6 +16,7 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: bonettdreans
+  namespace: default
 spec:
   profile:
     displayName: Hector Bonett
